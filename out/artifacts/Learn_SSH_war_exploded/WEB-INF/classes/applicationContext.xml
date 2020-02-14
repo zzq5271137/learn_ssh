@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--
+        把struts的action交由spring来管理;
+        注意:
+        1. 不能使用单例(scope必须为prototype);
+        2. accountService需要在这里手动注入;
+    -->
+    <bean id="accountAction" class="com.mycomp.web.AccountAction"
+          scope="prototype">
+        <property name="accountService" ref="accountService"/>
+    </bean>
+
+    <!-- service -->
+    <bean id="accountService" class="com.mycomp.service.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"/>
+    </bean>
+
+    <!-- dao -->
+    <bean id="accountDao" class="com.mycomp.dao.AccountDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 引入hibernate的配置 -->
+    <import resource="hibernateApplication.xml"/>
+</beans>

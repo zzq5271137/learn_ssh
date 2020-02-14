@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+    <package name="struts" extends="struts-default">
+        <!--
+            现在的class是spring当中bean的id, struts2会自动去找spring核心配置文件中的相应的bean;
+            需要struts2-spring-plugin-2.5.16.jar
+        -->
+        <action name="account_*" class="accountAction" method="{1}"/>
+    </package>
+
+</struts>
