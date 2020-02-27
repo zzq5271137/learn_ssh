@@ -6,7 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e566c6f-e182-43e9-a781-5d87988f2f38" name="Default Changelist" comment="" />
+    <list default="true" id="8e566c6f-e182-43e9-a781-5d87988f2f38" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/课件/撩课-SSH整合.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/课件/撩课-Spring-Aop.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/课件/撩课-Spring-jdbc模板.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/课件/撩课-Spring.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/课件/撩课-Spring.xmind" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -401,6 +407,8 @@
       <workItem from="1582797320904" duration="45000" />
       <workItem from="1582797404605" duration="38000" />
       <workItem from="1582800714844" duration="55000" />
+      <workItem from="1582814659411" duration="1000" />
+      <workItem from="1582814707397" duration="1000" />
     </task>
     <servers />
   </component>
