@@ -38,4 +38,5 @@ public class AccountDaoImpl extends HibernateDaoSupport implements IAccountDao {
                 (List<Account>) this.getHibernateTemplate().findByCriteria(detachedCriteria);
         return accounts;
     }
+
 }
